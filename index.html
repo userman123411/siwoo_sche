@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#efded6">
   <meta name="description" content="박시우의 광고·매거진·행사 활동을 한글과 영문으로 정리한 에디토리얼 아카이브.">
+  <title>박시우 — 활동 아카이브</title>
   <title>박시우 Park Si Woo — 활동 아카이브</title>
   <style>
     :root {
@@ -75,6 +76,7 @@
     .eyebrow, .section-kicker, .table-kicker {
       margin: 0 0 1.6rem; color: var(--burgundy); font-size: .68rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase;
     }
+    .hero h1 { max-width: 760px; margin: 0; font-family: var(--serif); font-size: clamp(3.7rem, 8.4vw, 8.4rem); font-weight: 400; letter-spacing: -.075em; line-height: .93; }
     .hero h1 { max-width: 760px; margin: 0; font-family: var(--serif); font-size: clamp(2.9rem, 6.1vw, 6.1rem); font-weight: 400; letter-spacing: -.075em; line-height: .96; }
     .hero h1 em { display: block; padding-left: clamp(2rem, 7vw, 7rem); font-style: normal; }
     .hero-subtitle { display: block; margin-top: .7em; color: var(--burgundy); font-family: var(--sans); font-size: .22em; font-weight: 600; letter-spacing: .12em; line-height: 1; }
@@ -87,9 +89,11 @@
     .scroll-cue::after { content: "↓"; display: block; margin-top: .3rem; text-align: center; font-size: 1rem; }
 
     .intro { width: min(1160px, 100%); margin: auto; padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 5vw, 4.75rem) clamp(4rem, 8vw, 7rem); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: clamp(2rem, 7vw, 8rem); align-items: start; }
     .intro-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 7vw, 8rem); align-items: start; }
     .intro h2, .section-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 5rem); font-weight: 400; letter-spacing: -.06em; line-height: 1; }
     .intro h2 span { display: block; color: var(--rose-deep); }
+    .intro-copy { max-width: 580px; margin: .2rem 0 0; color: var(--muted); font-size: 1rem; line-height: 2; }
     .intro-copy { max-width: 720px; margin: .2rem 0 0; color: var(--muted); font-size: 1rem; line-height: 2; }
     .intro-copy strong { color: var(--ink); font-weight: 500; }
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
@@ -102,6 +106,10 @@
     .section-heading h2 { max-width: 560px; }
     .section-heading h2 span { color: var(--rose-deep); }
     .section-note { max-width: 300px; margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.8; text-align: right; }
+    .archive-tabs { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 2.2rem; }
+    .archive-tab { cursor: pointer; border: 1px solid var(--line); border-radius: 100px; padding: .62rem .95rem; color: var(--muted); background: transparent; font: inherit; font-size: .72rem; letter-spacing: .05em; transition: background .2s, color .2s, border-color .2s; }
+    .archive-tab:hover, .archive-tab:focus-visible, .archive-tab[aria-selected="true"] { border-color: var(--burgundy); color: var(--white); background: var(--burgundy); }
+    .table-panel[hidden] { display: none; }
     .table-section + .table-section { margin-top: clamp(4rem, 8vw, 7rem); }
     .table-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
     .table-section-heading h3 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 400; letter-spacing: -.055em; line-height: 1; }
@@ -136,6 +144,18 @@
     .feature-copy p { max-width: 450px; margin: 2rem 0 0; color: var(--muted); font-size: .95rem; line-height: 2; }
     .quote { margin: 2.5rem 0 0; padding-left: 1.2rem; border-left: 2px solid var(--rose-deep); color: var(--burgundy); font-family: var(--serif); font-size: 1.2rem; line-height: 1.55; }
 
+    .timeline { padding: clamp(4rem, 9vw, 8rem) 0; color: var(--white); background: var(--burgundy); }
+    .timeline-inner { width: min(1160px, 100%); margin: auto; padding: 0 clamp(1.25rem, 5vw, 4.75rem); }
+    .timeline .section-kicker { color: #efbebb; }
+    .timeline h2 { margin: 0; font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 6rem); font-weight: 400; letter-spacing: -.07em; line-height: .98; }
+    .timeline h2 span { display: block; color: #e3aaa8; }
+    .timeline-list { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 4rem; }
+    .timeline-list::before { content: ""; position: absolute; top: .52rem; left: 0; right: 0; border-top: 1px solid rgba(255,255,255,.4); }
+    .timeline-item { position: relative; padding-top: 2rem; }
+    .timeline-item::before { content: ""; position: absolute; top: .18rem; left: 0; width: .7rem; height: .7rem; border: 2px solid var(--burgundy); border-radius: 50%; background: #e3aaa8; box-shadow: 0 0 0 4px var(--burgundy); }
+    .timeline-year { color: #e3aaa8; font-family: var(--serif); font-size: 1.8rem; }
+    .timeline-label { display: block; margin-top: .45rem; color: rgba(255,255,255,.75); font-size: .75rem; line-height: 1.6; }
+
     .site-footer { display: flex; justify-content: space-between; gap: 1.5rem; width: min(1400px, 100%); margin: auto; padding: 2.3rem clamp(1.25rem, 5vw, 4.75rem); color: var(--muted); font-size: .68rem; letter-spacing: .08em; }
     .site-footer p { margin: 0; }
     .footer-mark { color: var(--burgundy); font-weight: 700; }
@@ -145,6 +165,7 @@
       .header-nav { gap: .7rem; font-size: .6rem; }
       .hero { min-height: auto; }
       .hero-inner { grid-template-columns: 1fr; gap: 3rem; padding-top: 6.2rem; padding-bottom: 5rem; }
+      .hero h1 { font-size: clamp(3.4rem, 16vw, 5.5rem); }
       .hero h1 { font-size: clamp(2.8rem, 12vw, 4.4rem); }
       .hero h1 em { padding-left: 1.5rem; }
       .hero-portrait { width: min(82vw, 360px); justify-self: center; margin-right: 1rem; }
@@ -155,6 +176,38 @@
       .section-note { margin-top: 1.4rem; text-align: left; }
       .feature-art { min-height: 430px; }
       .feature-art img { inset: 1.5rem 16% 1.5rem 1.5rem; width: calc(84% - 1.5rem); height: calc(100% - 3rem); }
+      .timeline-list { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.2rem; }
+      .timeline-list::before { display: none; }
+      .archive-inner { padding-inline: 1rem; }
+      .table-section + .table-section { margin-top: 4.5rem; }
+      .table-section-heading { display: block; margin-bottom: 1rem; }
+      .table-section-heading h3 { font-size: 2.45rem; }
+      .table-section-heading h3 span { display: block; margin-top: .35rem; font-size: .28em; }
+      .table-wrap { overflow: visible; border-top: 0; }
+      table, tbody, tr, td { display: block; width: 100%; min-width: 0; }
+      thead { display: none; }
+      tbody tr { position: relative; margin-bottom: .85rem; padding: 1rem 1rem 1.05rem 3.15rem; border: 1px solid rgba(44, 31, 29, .13); border-radius: 18px; background: var(--paper); box-shadow: 0 8px 22px rgba(65, 39, 36, .07); }
+      tbody tr:hover { background: var(--paper); }
+      td { position: relative; padding: .3rem 0; border: 0; font-size: .82rem; }
+      td::before { display: block; margin-bottom: .15rem; color: var(--rose-deep); font-size: .56rem; font-weight: 700; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
+      .col-no { position: absolute; top: 1.05rem; left: 1rem; width: 1.5rem; color: var(--burgundy); font-family: var(--serif); font-size: 1.05rem; line-height: 1; }
+      .col-date { width: auto; white-space: normal; color: var(--burgundy); font-size: .72rem; font-variant-numeric: tabular-nums; }
+      .item-title { line-height: 1.45; }
+      .item-en { overflow-wrap: anywhere; line-height: 1.45; }
+      .tag { white-space: normal; }
+      #panel-brand td:nth-child(1)::before, #panel-magazine td:nth-child(1)::before, #panel-event td:nth-child(1)::before { content: "No."; visibility: hidden; }
+      #panel-brand td:nth-child(2)::before { content: "Brand"; }
+      #panel-brand td:nth-child(3)::before { content: "Title"; }
+      #panel-brand td:nth-child(4)::before { content: "Category"; }
+      #panel-brand td:nth-child(5)::before { content: "Date"; }
+      #panel-magazine td:nth-child(2)::before { content: "Magazine"; }
+      #panel-magazine td:nth-child(3)::before { content: "Title"; }
+      #panel-magazine td:nth-child(4)::before { content: "Date"; }
+      #panel-magazine td:nth-child(5)::before { content: "Note"; }
+      #panel-event td:nth-child(2)::before { content: "Place"; }
+      #panel-event td:nth-child(3)::before { content: "Activity"; }
+      #panel-event td:nth-child(4)::before { content: "Date"; }
+      #panel-brand td:nth-child(3), #panel-magazine td:nth-child(3), #panel-event td:nth-child(3) { margin-top: .5rem; padding-top: .65rem; border-top: 1px dashed rgba(44, 31, 29, .16); }
       .archive-disclaimer span { float: none; display: block; margin-top: .3rem; }
       .site-footer { display: block; }
       .site-footer p + p { margin-top: .5rem; }
@@ -171,6 +224,7 @@
     <a class="wordmark" href="#top" aria-label="박시우 아카이브 홈">PARK SIWOO <span>/</span> ARCHIVE</a>
     <nav class="header-nav" aria-label="주요 메뉴">
       <a href="#archive">Archive</a>
+      <a href="#story">Story</a>
     </nav>
   </header>
 
@@ -178,20 +232,58 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy">
+          <p class="eyebrow">A record of the next scene</p>
+          <h1 id="hero-title">박시우,<br><em>성장하는</em><br>모든 장면</h1>
+          <p class="hero-dek">배우로, 아티스트로, 그리고 한 사람으로. 박시우가 새로운 이름과 만남을 쌓아가는 2026 활동 아카이브.</p>
+          <div class="hero-meta" aria-label="프로필 요약"><span>Actor · Singer</span><span>845</span><span>2026 archive</span></div>
           <p class="eyebrow">Activity archive</p>
           <h1 id="hero-title">박시우<br><em>Park Si Woo</em><span class="hero-subtitle">활동 아카이브</span></h1>
           <p class="hero-dek">배우로, 아티스트로서 쌓아온 2026 활동 아카이브.</p>
           <div class="hero-meta" aria-label="프로필 요약"><span>Actor</span><span>845</span><span>2026 archive</span></div>
         </div>
         <figure class="hero-portrait">
+          <img src="assets/park-siwoo-editorial.jpeg" alt="흰 재킷을 입고 카메라를 바라보는 박시우의 에디토리얼 화보" fetchpriority="high">
           <img src="1.jpeg" alt="흰 재킷을 입고 카메라를 바라보는 박시우의 에디토리얼 화보" fetchpriority="high">
         </figure>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll to explore</div>
     </section>
 
+    <section class="intro" id="story" aria-labelledby="intro-title">
+      <div class="intro-grid">
+        <div>
+          <p class="section-kicker">01 / About the archive</p>
+          <h2 id="intro-title">다음 장면을<br><span>기다리게 하는 사람</span></h2>
+        </div>
+        <div>
+          <p class="intro-copy"><strong>박시우의 2026년 활동을 한눈에 볼 수 있도록 정리한 기록입니다.</strong> 브랜드와 매거진, 팬과 만난 순간들을 공식 발표일과 함께 담았습니다. 한 해의 속도보다, 그가 매 장면에서 넓혀가는 가능성을 바라봅니다.</p>
+          <div class="stats" aria-label="아카이브 통계">
+            <div><span class="stat-number">06</span><span class="stat-label">Brand / Commercial</span></div>
+            <div><span class="stat-number">05</span><span class="stat-label">Magazine</span></div>
+            <div><span class="stat-number">10</span><span class="stat-label">Event</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive" id="archive" aria-labelledby="archive-title">
     <section class="archive" id="archive" aria-label="활동 아카이브">
       <div class="archive-inner">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">02 / Activity archive</p>
+            <h2 id="archive-title">활동의 결을<br><span>시간순으로 읽다</span></h2>
+          </div>
+          <p class="section-note">스크린샷 원문의 날짜와 고유명사를 기준으로 옮기고, 각 항목에 자연스러운 영문 라벨을 덧붙였습니다.</p>
+        </div>
+
+        <div class="archive-tabs" role="tablist" aria-label="활동 카테고리">
+          <button class="archive-tab" role="tab" aria-selected="true" aria-controls="panel-brand" id="tab-brand" data-target="panel-brand">브랜드 · 광고 / Brand</button>
+          <button class="archive-tab" role="tab" aria-selected="false" aria-controls="panel-magazine" id="tab-magazine" data-target="panel-magazine">잡지 / Magazine</button>
+          <button class="archive-tab" role="tab" aria-selected="false" aria-controls="panel-event" id="tab-event" data-target="panel-event">행사 / Event</button>
+        </div>
+
+        <div class="table-panel" id="panel-brand" role="tabpanel" aria-labelledby="tab-brand">
         <section class="table-section" id="panel-brand" aria-labelledby="brand-heading">
           <div class="table-section-heading"><h3 id="brand-heading">브랜드 · 광고 <span>Brand / Commercial</span></h3></div>
           <div class="table-wrap">
@@ -199,17 +291,25 @@
               <caption>박시우 브랜드 및 광고 활동</caption>
               <thead><tr><th scope="col">No.</th><th scope="col">브랜드 / Brand</th><th scope="col">활동 / Title</th><th scope="col">분야 / Category</th><th scope="col">공식 발표일 / Date</th></tr></thead>
               <tbody>
+                <tr><td class="col-no">01</td><td><span class="item-title">SnackPaper Y&amp;S 서브 브랜드</span><span class="item-en">SnackPaper Y&amp;S sub-brand · Y&amp;S 子品牌</span></td><td><span class="item-title">YS 브랜드 모델 (2인)</span><span class="item-en">YS Brand Model · Duo</span></td><td><span class="tag">식품 · Food</span></td><td class="col-date">2026.07.26</td></tr>
+                <tr><td class="col-no">02</td><td><span class="item-title">킴트루 (KIMTRUE)</span><span class="item-en">KIMTRUE · 且初</span></td><td><span class="item-title">클렌징 앰배서더</span><span class="item-en">Cleansing Ambassador</span></td><td><span class="tag">뷰티 · Beauty</span></td><td class="col-date">2026.08.05</td></tr>
+                <tr><td class="col-no">03</td><td><span class="item-title">온그리디언츠 (Ongredients)</span><span class="item-en">Ongredients · 温丽慈</span></td><td><span class="item-title">중국 지역 브랜드 모델</span><span class="item-en">China Region Brand Model</span></td><td><span class="tag">스킨케어 · Skincare</span></td><td class="col-date">2026.08.22</td></tr>
+                <tr><td class="col-no">04</td><td><span class="item-title">슬로화 (施洛华)</span><span class="item-en">Shi Luo Hua</span></td><td><span class="item-title">브랜드 모델 (2인)</span><span class="item-en">Brand Model · Duo</span></td><td><span class="tag">패션/액세서리 · Fashion/Eyewear</span></td><td class="col-date">2026.08.23</td></tr>
+                <tr><td class="col-no">05</td><td><span class="item-title">SnackPaper 2.0</span><span class="item-en">SnackPaper 2.0 · 联名产品</span></td><td><span class="item-title">YS 브랜드 모델 (2인)<br>(콜라보 제품)</span><span class="item-en">YS Brand Model · Duo<br>Collaboration Product</span></td><td><span class="tag">식품 · Food</span></td><td class="col-date">2026.08.29</td></tr>
+                <tr><td class="col-no">06</td><td><span class="item-title">INTO YOU</span><span class="item-en">INTO YOU · 心慕与你</span></td><td><span class="item-title">무쌔(慕色) 라인 앰배서더</span><span class="item-en">Muse Line Ambassador</span></td><td><span class="tag">뷰티 · Beauty</span></td><td class="col-date">2026.09.02</td></tr>
                 <tr><td class="col-no">01</td><td><span class="item-title">SnackPaper Y&amp;S 서브 브랜드</span><span class="item-en">SnackPaper Y&amp;S sub-brand </span></td><td><span class="item-title">YS 브랜드 모델 (2인)</span><span class="item-en">YS Brand Model · Duo</span></td><td><span class="tag">식품 · Food</span></td><td class="col-date">2026.07.26</td></tr>
                 <tr><td class="col-no">02</td><td><span class="item-title">킴트루 (KIMTRUE)</span><span class="item-en">KIMTRUE </span></td><td><span class="item-title">앰배서더</span><span class="item-en">Cleansing Ambassador</span></td><td><span class="tag">뷰티 · Beauty</span></td><td class="col-date">2026.08.05</td></tr>
                 <tr><td class="col-no">03</td><td><span class="item-title">온그리디언츠 (Ongredients)</span><span class="item-en">Ongredients </span></td><td><span class="item-title">중국 지역 브랜드 모델</span><span class="item-en">China Region Brand Model</span></td><td><span class="tag">스킨케어 · Skincare</span></td><td class="col-date">2026.08.22</td></tr>
                 <tr><td class="col-no">04</td><td><span class="item-title">SEROVA</span><span class="item-en">Shi Luo Hua</span></td><td><span class="item-title">브랜드 모델 (2인)</span><span class="item-en">Brand Model · Duo</span></td><td><span class="tag">패션/액세서리 · Fashion/Eyewear</span></td><td class="col-date">2026.08.23</td></tr>
                 <tr><td class="col-no">05</td><td><span class="item-title">SnackPaper 2.0</span><span class="item-en">SnackPaper 2.0 </span></td><td><span class="item-title">YS 브랜드 모델 (2인)<br>(콜라보 제품)</span><span class="item-en">YS Brand Model · Duo<br>Collaboration Product</span></td><td><span class="tag">식품 · Food</span></td><td class="col-date">2026.08.29</td></tr>
-                <tr><td class="col-no">06</td><td><span class="item-title">INTO YOU</span><span class="item-en">INTO YOU </span></td><td><span class="item-title"> INTO YOU 앰배서더</span><span class="item-en">Muse Line Ambassador</span></td><td><span class="tag">뷰티 · Beauty</span></td><td class="col-date">2026.09.02</td></tr>
+                <tr><td class="col-no">06</td><td><span class="item-title">INTO YOU</span><span class="item-en">INTO YOU </span></td><td><span class="item-title">INTO YOU 앰배서더</span><span class="item-en">Muse Line Ambassador</span></td><td><span class="tag">뷰티 · Beauty</span></td><td class="col-date">2026.09.02</td></tr>
               </tbody>
             </table>
           </div>
+        </div>
         </section>
 
+        <div class="table-panel" id="panel-magazine" role="tabpanel" aria-labelledby="tab-magazine" hidden>
         <section class="table-section" id="panel-magazine" aria-labelledby="magazine-heading">
           <div class="table-section-heading"><h3 id="magazine-heading">잡지 <span>Magazine</span></h3></div>
           <div class="table-wrap">
@@ -220,13 +320,16 @@
                 <tr><td class="col-no">01</td><td><span class="item-title">로딩 (LOADING)</span><span class="item-en">LOADING</span></td><td><span class="item-title">중국 첫 더블 커버 (2인)</span><span class="item-en">First Chinese Double Cover · Duo</span></td><td class="col-date">2026.07.16</td><td><span class="item-note">-</span></td></tr>
                 <tr><td class="col-no">02</td><td><span class="item-title">마담 피가로 옴므</span><span class="item-en">Madame Figaro Hommes · 费加罗男士</span></td><td><span class="item-title">8월호 더블 커버 (2인)</span><span class="item-en">August Double Cover · Duo</span></td><td class="col-date">2026.08.04</td><td><span class="item-note">중국판</span><span class="item-en">Chinese edition</span></td></tr>
                 <tr><td class="col-no">03</td><td><span class="item-title">키노 (KINO) ISSUE 06</span><span class="item-en">KINO ISSUE 06</span></td><td><span class="item-title">박시우 첫 단독 잡지</span><span class="item-en">Park Siwoo's First Solo Magazine</span></td><td class="col-date">2026.08.21</td><td><span class="item-note">중국판</span><span class="item-en">Chinese edition</span></td></tr>
+                <tr><td class="col-no">04</td><td><span class="item-title">스피 (势界)</span><span class="item-en">POWERCIRCLES</span></td><td><span class="item-title">9월호(금구월) 더블 커버 (2인)</span><span class="item-en">September Double Cover · Duo</span></td><td class="col-date">2026.08.30</td><td><span class="item-note">중국판</span><span class="item-en">Chinese edition</span></td></tr>
                 <tr><td class="col-no">04</td><td><span class="item-title">POWERCIRCLES</span><span class="item-en">POWERCIRCLES</span></td><td><span class="item-title">9월호 더블 커버 (2인)</span><span class="item-en">September Double Cover · Duo</span></td><td class="col-date">2026.08.30</td><td><span class="item-note">중국판</span><span class="item-en">Chinese edition</span></td></tr>
                 <tr><td class="col-no">05</td><td><span class="item-title">코스모폴리탄 맨</span><span class="item-en">Cosmopolitan Man Korea</span></td><td><span class="item-title">9월호 내지 화보·인터뷰</span><span class="item-en">September Editorial · Interview</span></td><td class="col-date">2026.08.31</td><td><span class="item-note">한국판</span><span class="item-en">Korean edition</span></td></tr>
               </tbody>
             </table>
           </div>
+        </div>
         </section>
 
+        <div class="table-panel" id="panel-event" role="tabpanel" aria-labelledby="tab-event" hidden>
         <section class="table-section" id="panel-event" aria-labelledby="event-heading">
           <div class="table-section-heading"><h3 id="event-heading">행사 <span>Event</span></h3></div>
           <div class="table-wrap">
@@ -236,17 +339,23 @@
               <tbody>
                 <tr><td class="col-no">01</td><td><span class="item-title">한국 문경시</span><span class="item-en">Mungyeong, Korea · 韩国闻庆市</span></td><td><span class="item-title">문경시 지역 홍보대사</span><span class="item-en">Mungyeong Promotional Ambassador</span></td><td class="col-date">2026.05.10</td></tr>
                 <tr><td class="col-no">02</td><td><span class="item-title">웨이디엔 (微店) 자주 채널</span><span class="item-en">Weidian Purple V Channel · 微店紫V频道</span></td><td><span class="item-title">웨이디엔 ‘별의 소원’ 공식 협력 파트너</span><span class="item-en">Weidian “Star Wish” Official Partner</span></td><td class="col-date">2026.08.08</td></tr>
+                <tr><td class="col-no">03</td><td><span class="item-title">중국 마카오</span><span class="item-en">Macau, China · 中国澳门</span></td><td><span class="item-title">2인 팬미팅</span><span class="item-en">Duo Fan Meeting</span></td><td class="col-date">2026.08.09</td></tr>
+                <tr><td class="col-no">04</td><td><span class="item-title">한국 서울</span><span class="item-en">Seoul, Korea · 韩国首尔</span></td><td><span class="item-title">2인 팬미팅</span><span class="item-en">Duo Fan Meeting</span></td><td class="col-date">2026.08.22</td></tr>
                 <tr><td class="col-no">03</td><td><span class="item-title">중국 마카오</span><span class="item-en">Macau, China · 中国澳门</span></td><td><span class="item-title">검사실의 제안 2인 팬미팅</span><span class="item-en">Prosecutor's Proposal Duo Fan Meeting</span></td><td class="col-date">2026.08.09</td></tr>
                 <tr><td class="col-no">04</td><td><span class="item-title">한국 서울</span><span class="item-en">Seoul, Korea · 韩国首尔</span></td><td><span class="item-title">검사실의 제안 2인 팬미팅</span><span class="item-en">Prosecutor's Proposal Duo Fan Meeting</span></td><td class="col-date">2026.08.22</td></tr>
                 <tr><td class="col-no">05</td><td><span class="item-title">fromm</span><span class="item-en">fromm</span></td><td><span class="item-title">2인 라이브 방송</span><span class="item-en">Duo Live Stream</span></td><td class="col-date">2026.08.25</td></tr>
                 <tr><td class="col-no">06</td><td><span class="item-title">온그리디언츠 브랜드 VIP 라운지</span><span class="item-en">Ongredients Brand VIP Lounge · 温丽慈品牌专属VIP Lounge</span></td><td><span class="item-title">브랜드 VIP 발표회 / 팬 오프라인 미팅</span><span class="item-en">Brand VIP Launch · Offline Fan Meeting</span></td><td class="col-date">2026.08.25</td></tr>
+                <tr><td class="col-no">07</td><td><span class="item-title">태국 방콕</span><span class="item-en">Bangkok, Thailand · 泰国曼谷</span></td><td><span class="item-title">2인 팬미팅</span><span class="item-en">Duo Fan Meeting</span></td><td class="col-date">2026.08.29</td></tr>
+                <tr><td class="col-no">08</td><td><span class="item-title">중국 홍콩</span><span class="item-en">Hong Kong, China · 中国香港</span></td><td><span class="item-title">2인 팬미팅</span><span class="item-en">Duo Fan Meeting</span></td><td class="col-date">2026.09.05–09.06</td></tr>
                 <tr><td class="col-no">07</td><td><span class="item-title">태국 방콕</span><span class="item-en">Bangkok, Thailand · 泰国曼谷</span></td><td><span class="item-title">검사실의 제안 2인 팬미팅</span><span class="item-en">Prosecutor's Proposal Duo Fan Meeting</span></td><td class="col-date">2026.08.29</td></tr>
                 <tr><td class="col-no">08</td><td><span class="item-title">중국 홍콩</span><span class="item-en">Hong Kong, China · 中国香港</span></td><td><span class="item-title">검사실의 제안 2인 팬미팅</span><span class="item-en">Prosecutor's Proposal Duo Fan Meeting</span></td><td class="col-date">2026.09.05–09.06</td></tr>
                 <tr><td class="col-no">09</td><td><span class="item-title">SnackPaper</span><span class="item-en">SnackPaper</span></td><td><span class="item-title">SnackPaper Summer Camp<br>김윤식&amp;박시우 첫 2:1 캠핑 테마 영상 사인회 (2인)</span><span class="item-en">First 2:1 Camping-themed Video Signing · Duo</span></td><td class="col-date">2026.09.12</td></tr>
+                <tr><td class="col-no">10</td><td><span class="item-title">베트남 호찌민</span><span class="item-en">Ho Chi Minh City, Vietnam · 越南胡志明</span></td><td><span class="item-title">2인 팬미팅</span><span class="item-en">Duo Fan Meeting</span></td><td class="col-date">2026.11.21</td></tr>
                 <tr><td class="col-no">10</td><td><span class="item-title">베트남 호찌민</span><span class="item-en">Ho Chi Minh City, Vietnam · 越南胡志明</span></td><td><span class="item-title">검사실의 제안 2인 팬미팅</span><span class="item-en">Prosecutor's Proposal Duo Fan Meeting</span></td><td class="col-date">2026.11.21</td></tr>
               </tbody>
             </table>
           </div>
+        </div>
         </section>
         <p class="archive-disclaimer">※ 공개된 공식 자료를 기준으로 정리한 기록이며, 일부 일정은 추후 변경될 수 있습니다. <span>기준일 · 2026.09</span></p>
       </div>
@@ -256,16 +365,31 @@
       <div class="feature-grid">
         <figure class="feature-art">
           <span class="feature-art-label">Park Siwoo / Portrait</span>
+          <img src="assets/park-siwoo-editorial.jpeg" alt="박시우의 세로형 인물 화보" loading="lazy">
           <img src="2.jpeg" alt="가죽 재킷을 입고 카메라를 바라보는 박시우의 현장 사진" loading="lazy">
         </figure>
         <div class="feature-copy">
           <p class="section-kicker">03 / The quiet detail</p>
           <h2 id="feature-title">한 사람의 이름이<br><span>장면이 되기까지</span></h2>
+          <p>광고의 한 컷, 잡지의 한 페이지, 팬과 마주한 몇 분. 각각의 기록은 서로 다른 얼굴을 보여주지만, 그 안에는 오래 이어지고 싶은 마음과 계속 시도하려는 태도가 함께 남아 있습니다.</p>
+          <blockquote class="quote">“지금의 마음은 잃지 않고, 사람들에게 계속 다음 모습을 궁금하게 하는 배우가 되고 싶어요.”</blockquote>
           <blockquote class="quote">“지금의 마음은 잃지 않고, 사람들에게 계속 다음 모습을 궁금하게 만드는 배우가 되고 싶어요.”</blockquote>
         </div>
       </div>
     </section>
 
+    <section class="timeline" aria-labelledby="timeline-title">
+      <div class="timeline-inner">
+        <p class="section-kicker">04 / A year in motion</p>
+        <h2 id="timeline-title">한 해의 리듬,<br><span>네 개의 장면</span></h2>
+        <div class="timeline-list">
+          <div class="timeline-item"><span class="timeline-year">05</span><span class="timeline-label">문경시 지역 홍보대사<br>Mungyeong Promotional Ambassador</span></div>
+          <div class="timeline-item"><span class="timeline-year">07</span><span class="timeline-label">브랜드·매거진 활동 시작<br>Brand &amp; Magazine Debuts</span></div>
+          <div class="timeline-item"><span class="timeline-year">08</span><span class="timeline-label">아시아 팬미팅과 커버<br>Asian Fan Meetings &amp; Covers</span></div>
+          <div class="timeline-item"><span class="timeline-year">09–11</span><span class="timeline-label">새로운 만남을 향해<br>More scenes ahead</span></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -274,5 +398,23 @@
     <p>Made as an independent editorial page</p>
   </footer>
 
+  <script>
+    const tabs = document.querySelectorAll('.archive-tab');
+    const panels = document.querySelectorAll('.table-panel');
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.dataset.target;
+        tabs.forEach((item) => item.setAttribute('aria-selected', String(item === tab)));
+        panels.forEach((panel) => { panel.hidden = panel.id !== targetId; });
+      });
+      tab.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+        event.preventDefault();
+        const nextIndex = event.key === 'ArrowRight' ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
+        tabs[nextIndex].focus();
+        tabs[nextIndex].click();
+      });
+    });
+  </script>
 </body>
 </html>
